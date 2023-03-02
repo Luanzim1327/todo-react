@@ -1,0 +1,57 @@
+.container {
+    margin: auto;
+    max-width: 37.5rem;
+}
+
+.done  {
+    text-decoration: line-through;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.875rem;
+    padding: 0.9375rem;
+    margin-top: 0.9375rem;
+}
+
+.item img {
+    width: 1.25rem;
+}
+
+.card {
+    box-shadow: 0 2px 7px 1px rgba(0,0,0,0.2);
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* input text  & button add*/
+
+.inputs-field {
+    display: flex;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+}
+
+.button-add {
+    padding: 10px;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.input-todo {
+    width: 100%;
+    padding: 10px;
+    padding-left: 20px;
+    border: none;
+    outline: none;
+    background-color: #ccc;
+    color: rgb(15, 15, 15);
+    font-size: 14pt;
+}
