@@ -1,12 +1,44 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Todo.css"
 import List from "./components/List";
 import Item from "./components/Item";
 import TodoForm from "./components/TodoForm";
 
-function Todo () {
+const SAVED_ITEMS = "savedItems"
 
-    const [items , setItems] = useState([]);
+function Todo () {
+    const listLocalStorage = () => {
+        let list = localStorage.getItem(SAVED_ITEMS);
+
+        if(list) {
+            console.log(list);
+            return JSON.parse(localStorage.getItem(SAVED_ITEMS));
+        } else {
+            return []
+        }
+    }
+
+    const [items , setItems] = useState(listLocalStorage());
+
+    
+    useEffect(() => {
+
+        const listLocalStorage = () => {
+            let list = localStorage.getItem(SAVED_ITEMS);
+    
+            if(list) {
+                console.log(list);
+                return JSON.parse(localStorage.getItem(SAVED_ITEMS));
+            } else {
+                return []
+            }
+        }
+
+    } , [])
+
+    useEffect(() => {
+        localStorage.setItem(SAVED_ITEMS , JSON.stringify(items));  
+    } , [items])
 
     function onAddItem(text) {
 
