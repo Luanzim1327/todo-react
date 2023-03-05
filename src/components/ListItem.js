@@ -20,7 +20,7 @@ function ListItem (props) {
 
     return (
             <li>
-                <Card className={props.item.done ? "done" : ""}>
+                <Card className={props.item.done ? "done" : "item"}>
                     {props.item.text}
                     <div>
                         <button onClick={() => {props.onDone(props.item)}}><DoneImg done={props.item.done}></DoneImg></button>

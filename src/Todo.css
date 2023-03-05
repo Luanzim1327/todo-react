@@ -3,6 +3,26 @@
     max-width: 37.5rem;
 }
 
+.header {
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.header .addButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: skyblue;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 .done  {
     text-decoration: line-through;
 }
@@ -32,6 +52,11 @@ ul {
 
 /* input text  & button add*/
 
+form {
+    padding: 30px;
+    background-color: white;
+}
+
 .inputs-field {
     display: flex;
     box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.1);
@@ -54,4 +79,20 @@ ul {
     background-color: #ccc;
     color: rgb(15, 15, 15);
     font-size: 14pt;
+}
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.hide {
+    display: none;
 }
